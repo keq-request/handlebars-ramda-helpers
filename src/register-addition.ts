@@ -22,8 +22,8 @@ export function registerAddition(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__isFalse', wrap(R.identical(R.F())))
 
 
-  const allIs = R.useWith(R.all, [R.is, R.identity])
-  const allEq = R.useWith(R.all, [R.identical, R.identity])
+  const allIs = R.curry(R.useWith< R.AnyFunction, (val: any) => boolean, any, any, boolean >(R.all, [R.is, R.identity]))
+  const allEq = R.curry(R.useWith<any, (val: any) => boolean, any, any, boolean>(R.all, [R.identical, R.identity]))
 
   hbs.registerHelper('r__allIs', wrap(allIs))
   hbs.registerHelper('r__allIsObject', wrap(allIs(Object)))

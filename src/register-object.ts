@@ -30,7 +30,7 @@ export function registerObject(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__mergeWith', wrap(R.mergeWith))
   hbs.registerHelper('r__mergeWithKey', wrap(R.mergeWithKey))
   hbs.registerHelper('r__modify', wrap(R.modify))
-  hbs.registerHelper('r__modifyPath', wrap(R.modifyPath))
+  hbs.registerHelper('r__modifyPath', wrap(R['modifyPath']))
 
   hbs.registerHelper('r__objOf', wrap(R.objOf))
   hbs.registerHelper('r__omit', wrap(R.omit))
@@ -45,12 +45,12 @@ export function registerObject(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__props', wrap(R.props))
   hbs.registerHelper('r__set', wrap(R.set))
   hbs.registerHelper('r__toPairs', wrap(R.toPairs))
-  hbs.registerHelper('r__unwind', wrap(R.unwind))
+  hbs.registerHelper('r__unwind', wrap(R['unwind']))
   hbs.registerHelper('r__values', wrap(R.values))
   hbs.registerHelper('r__view', wrap(R.view))
 
   hbs.registerHelper('r__where', wrap(R.where))
-  hbs.registerHelper('r__whereAny', wrap(R.whereAny))
+  hbs.registerHelper('r__whereAny', wrap(R['whereAny']))
   hbs.registerHelper('r__whereEq', wrap(R.whereEq))
 }
 
