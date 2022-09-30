@@ -6,6 +6,7 @@ import { registerLogic } from './register-logic'
 import { registerMath } from './register-math'
 import { registerObject } from './register-object'
 import { registerRelation } from './register-relation'
+import { registerString } from './register-string'
 import { registerType } from './register-type'
 
 
@@ -18,5 +19,6 @@ export function register(hbs: typeof Handlebars): void {
   registerRelation(hbs)
   registerType(hbs)
   registerAddition(hbs)
+  registerString(hbs)
 }
 
