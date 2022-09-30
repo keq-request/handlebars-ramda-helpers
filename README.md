@@ -6,8 +6,6 @@
 [![dependencies](https://img.shields.io/david/keq-request/handlebars-ramda-helpers.svg?style=flat-square)](https://www.npmjs.com/package/handlebars-ramda-helpers)
 [![coveralls](https://img.shields.io/coveralls/github/keq-request/handlebars-ramda-helpers.svg?style=flat-square)](https://coveralls.io/github/keq-request/handlebars-ramda-helpers)
 
-
-
 <!-- description -->
 Provide powerful data processing capabilities for handlebars, by adding the ramda function as helpers.
 <!-- description -->
@@ -81,9 +79,11 @@ For more functions, please see [Ramda Doc](https://ramdajs.com/).
 
 In order to facilitate the use of ramda in handlebars, some extension functions have been added.
 
+#### Helpers
+
  name             | description
 :-----------------|:---------------------------
- r__define        | Define a variable
+ r__define        | Define a variable `{{r__define "variableName" "variableValue"}}
  r__Array         | Create an array `{{r__Array "0" "1" "2"}}`
  r__Object        | Create an object `{{r__Object "key1"="value1" "key2"="value2"}}`
  r__isObject      | R.is(Object)
@@ -105,11 +105,21 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
  r__allIsFalse    | R.all(R.identical(R.F()))
  r__padLeft       | R.curry((fillString, maxLength, str) => String(str).padStart(maxLength, fillString))
  r__padRight      | R.curry((fillString, maxLength, str) => String(str).padEnd(maxLength, fillString))
+
+#### Block Helpers
+
+ name             | description
+:-----------------|:---------------------------
+ r__define        | Define a variable `{{#r__define "variableName"}}"variableValue"{{/r__define}}`
+ r__toUpper       | R.toUpper
+ r__toLower       | R.toLower
+ r__trim          | R.trim
+
+> All block helpers can use as non-block helper
 <!-- usage -->
 
 <!-- addition -->
 <!-- addition -->
-
 
 ## Contributing & Development
 

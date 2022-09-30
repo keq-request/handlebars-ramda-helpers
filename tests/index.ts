@@ -36,3 +36,14 @@ test('render', t => {
 
   t.snapshot(str)
 })
+
+test('block helper', t => {
+  const template = `
+  {{r__toLower "SHOULD LOWER"}}
+  {{#r__toLower}}SHOULD LOWER{{/r__toLower}}
+  `
+
+  const str = Handlebars.compile(template)({})
+  console.log(str)
+  t.snapshot(str)
+})

@@ -7,10 +7,23 @@ export function registerAddition(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__Array', wrap(Array))
   hbs.registerHelper('r__Object', (options: Handlebars.HelperOptions) => options.hash as unknown)
 
-  hbs.registerHelper('r__define', (name, value, options) => {
+  hbs.registerHelper('r__define', function(this: any, name, ...args) {
+    if (!args.length) {
+      throw new Error('r__define expected two arguments but get none')
+    }
+
+    const options: Handlebars.HelperOptions = R.last(args)
     if (!options.data.root) options.data.root = {}
-    options.data.root[name] = value
+
+    if (options.fn) {
+      options.data.root[name] = options.fn(this)
+    } else if (args.length > 1) {
+      options.data.root[name] = args[0]
+    } else {
+      throw new Error('r__define expected two arguments but get one')
+    }
   })
+
 
   hbs.registerHelper('r__isObject', wrap(R.is(Object)))
   hbs.registerHelper('r__isNumber', wrap(R.is(Number)))
