@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.0.1...v1.1.0) (2022-09-30)
+
+
+### Features
+
+* add helpers that handle string ([3023a2b](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/3023a2bbfb7c09ab57554136df2ff6fd50670697))
+* support block helpers ([1a4e54f](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/1a4e54f433b103e9673dd5306d8b3c61c74365cd))
+
 ### [1.0.1](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.0.0...v1.0.1) (2022-09-30)
 
 
