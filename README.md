@@ -106,6 +106,13 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
  r__padLeft       | R.curry((fillString, maxLength, str) => String(str).padStart(maxLength, fillString))
  r__padRight      | R.curry((fillString, maxLength, str) => String(str).padEnd(maxLength, fillString))
 
+> If a function was defined by `{{r__define "fn" (r__equals "example")}}`,
+> the `fn` should be used like an helper, rather than a variable.
+>
+> Error: `{{r__all @root.fn (r__Array "example" "example")}}`
+>
+> Correct:`{{r__all (@root.fn) (r__Array "example" "example")}}`
+
 #### Block Helpers
 
  name             | description

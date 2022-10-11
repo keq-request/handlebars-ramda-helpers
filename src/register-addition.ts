@@ -18,7 +18,12 @@ export function registerAddition(hbs: typeof Handlebars): void {
     if (options.fn) {
       options.data.root[name] = options.fn(this)
     } else if (args.length > 1) {
-      options.data.root[name] = args[0]
+      const value = args[0]
+      if (typeof value === 'function') {
+        options.data.root[name] = wrap(value)
+      } else {
+        options.data.root[name] = value
+      }
     } else {
       throw new Error('r__define expected two arguments but get one')
     }
