@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.1.1](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.1.0...v1.1.1) (2022-10-11)
+
+
+### Bug Fixes
+
+* the function that created by r__define use handlebase options as an params ([d410bf3](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/d410bf3accb24d5f1c4bcbcea813670f99467ac4))
+
 ## [1.1.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.0.1...v1.1.0) (2022-09-30)
 
 
