@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.1.1...v1.2.0) (2022-10-13)
+
+
+### Features
+
+* add R.flatten function ([f5e5882](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/f5e588236797ebff6ed070640a75856bd25089b2))
+
+
+### Bug Fixes
+
+* r__replaced should be named r__replace ([9170203](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/91702036721a53ecc619c195e15af7af357aabee))
+
 ### [1.1.1](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.1.0...v1.1.1) (2022-10-11)
 
 
