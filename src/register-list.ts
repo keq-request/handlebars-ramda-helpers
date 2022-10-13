@@ -25,6 +25,7 @@ export function registerList(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__findIndex', wrap(R.findIndex))
   hbs.registerHelper('r__findLast', wrap(R.findLast))
   hbs.registerHelper('r__findLastIndex', wrap(R.findLastIndex))
+  hbs.registerHelper('r__flatten', wrap(R.flatten))
   hbs.registerHelper('r__fromPairs', wrap(R.fromPairs))
   hbs.registerHelper('r__groupBy', wrap(R.groupBy))
   hbs.registerHelper('r__groupWith', wrap(R.groupWith))
