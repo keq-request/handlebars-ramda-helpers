@@ -83,7 +83,7 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
 
  name             | description
 :-----------------|:---------------------------
- r__define        | Define a variable `{{r__define "variableName" "variableValue"}}
+ r__define        | Define a variable on context `{{r__define "variableName" "variableValue"}}
  r__Array         | Create an array `{{r__Array "0" "1" "2"}}`
  r__Object        | Create an object `{{r__Object "key1"="value1" "key2"="value2"}}`
  r__isObject      | R.is(Object)
@@ -109,15 +109,15 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
 > If a function was defined by `{{r__define "fn" (r__equals "example")}}`,
 > the `fn` should be used like an helper, rather than a variable.
 >
-> Error: `{{r__all @root.fn (r__Array "example" "example")}}`
+> Error: `{{r__all fn (r__Array "example" "example")}}`
 >
-> Correct:`{{r__all (@root.fn) (r__Array "example" "example")}}`
+> Correct:`{{r__all (fn) (r__Array "example" "example")}}`
 
 #### Block Helpers
 
  name             | description
 :-----------------|:---------------------------
- r__define        | Define a variable `{{#r__define "variableName"}}"variableValue"{{/r__define}}`
+ r__define        | Define a variable on context `{{#r__define "variableName"}}"variableValue"{{/r__define}}`
  r__toUpper       | R.toUpper
  r__toLower       | R.toLower
  r__trim          | R.trim

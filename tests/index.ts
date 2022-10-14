@@ -44,6 +44,24 @@ test('block helper', t => {
   `
 
   const str = Handlebars.compile(template)({})
-  console.log(str)
   t.snapshot(str)
+})
+
+test('r__define context', t => {
+  const template = `
+    {{#with books}}
+      {{r__define "variable" "defined on this context"}}
+    {{/with}}
+
+    {{! cannot find variable }}
+    {{r__replace "_" "_" variable}}
+  `
+
+  const view = {
+    books: [
+      { title: 'Javascript' },
+    ],
+  }
+
+  t.throws(() => Handlebars.compile(template)(view))
 })
