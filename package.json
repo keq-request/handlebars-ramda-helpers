@@ -4,7 +4,7 @@
   "module": "es/src/index.js",
   "types": "lib/src/index.d.ts",
   "description": "Provide powerful data processing capabilities for handlebars, by adding the ramda function as helpers.",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "keywords": [
     "handlebars",
     "hbs",

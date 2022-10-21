@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.4.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.3.0...v1.4.0) (2022-10-21)
+
+
+### Features
+
+* r__define can change context ([e0841c6](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/e0841c6d222d49275bbb4292075fed946b4dd524))
+
 ## [1.3.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.2.0...v1.3.0) (2022-10-14)
 
 
