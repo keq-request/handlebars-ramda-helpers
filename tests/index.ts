@@ -47,7 +47,7 @@ test('block helper', t => {
   t.snapshot(str)
 })
 
-test('r__define context', t => {
+test('r__define invalid context', t => {
   const template = `
     {{#with books}}
       {{r__define "variable" "defined on this context"}}
@@ -64,4 +64,22 @@ test('r__define context', t => {
   }
 
   t.throws(() => Handlebars.compile(template)(view))
+})
+
+test('r__define custom context', t => {
+  const template = `
+    {{#with books}}
+      {{r__define "variable" "defined on this context" context=@root}}
+    {{/with}}
+
+    {{r__replace "_" "_" variable}}
+  `
+
+  const view = {
+    books: [
+      { title: 'Javascript' },
+    ],
+  }
+
+  t.notThrows(() => Handlebars.compile(template)(view))
 })
