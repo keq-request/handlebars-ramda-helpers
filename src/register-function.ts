@@ -6,6 +6,7 @@ import { wrap } from './wrap'
 
 
 export function registerFunction(hbs: typeof Handlebars): void {
+  hbs.registerHelper('r__', () => R.__)
   hbs.registerHelper('r__F', wrap(R.F))
   hbs.registerHelper('r__T', wrap(R.T))
   hbs.registerHelper('r__identity', wrap(R.identity))
@@ -13,4 +14,5 @@ export function registerFunction(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__descend', wrap(R.descend))
   hbs.registerHelper('r__converge', wrap(R.converge))
   hbs.registerHelper('r__compose', wrap(R.compose))
+  hbs.registerHelper('r__useWith', wrap(R.useWith))
 }
