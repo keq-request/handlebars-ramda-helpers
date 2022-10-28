@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.6.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.5.0...v1.6.0) (2022-10-28)
+
+
+### Features
+
+* add R.innerJoin ([d9dc308](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/d9dc308cfebb56b870e416c7e1e6d0c80b1e6b52))
+
 ## [1.5.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.4.0...v1.5.0) (2022-10-27)
 
 
