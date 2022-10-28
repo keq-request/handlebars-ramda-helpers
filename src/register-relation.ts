@@ -13,6 +13,7 @@ export function registerRelation(hbs: typeof Handlebars): void {
   hbs.registerHelper('r__gt', wrap(R.gt))
   hbs.registerHelper('r__gte', wrap(R.gte))
   hbs.registerHelper('r__identical', wrap(R.identical))
+  hbs.registerHelper('r__innerJoin', wrap(R.innerJoin))
   hbs.registerHelper('r__intersection', wrap(R.intersection))
   hbs.registerHelper('r__lt', wrap(R.lt))
   hbs.registerHelper('r__lte', wrap(R.lte))
