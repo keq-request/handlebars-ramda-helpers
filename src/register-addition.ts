@@ -57,5 +57,9 @@ export function registerAddition(hbs: typeof Handlebars): void {
 
   hbs.registerHelper('r__padLeft', wrap(padLeft))
   hbs.registerHelper('r__padRight', wrap(padRight))
+
+  hbs.registerHelper('r__notEquals', wrap(R.complement(R.equals)))
+  hbs.registerHelper('r__pathNotEq', wrap(R.complement(R.pathEq)))
+  hbs.registerHelper('r__propNotEq', wrap(R.complement(R.propEq)))
 }
 

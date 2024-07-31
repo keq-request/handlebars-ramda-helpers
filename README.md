@@ -83,29 +83,32 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
 
  name             | description
 :-----------------|:---------------------------
- r__define        | Define a variable on context `{{r__define "variableName" "variableValue"}}
+ r__define        | Define a variable on context `{{r__define "variableName" "variableValue"}}`
  r__Array         | Create an array `{{r__Array "0" "1" "2"}}`
  r__Object        | Create an object `{{r__Object "key1"="value1" "key2"="value2"}}`
- r__isObject      | R.is(Object)
- r__isNumber      | R.is(Number)
- r__isString      | R.is(String)
- r__isArray       | R.is(Array)
- r__isFunction    | R.is(Function)
- r__isBoolean     | R.is(Boolean)
- r__isTrue        | R.identical(R.T())
- r__isFalse       | R.identical(R.F())
- r__allIs         | R.useWith(R.all, [R.is, R.identity])
- r__allIsObject   | R.all(R.is(Object))
- r__allIsNumber   | R.all(R.is(Number))
- r__allIsString   | R.all(R.is(String))
- r__allIsArray    | R.all(R.is(Array))
- r__allIsFunction | R.all(R.is(Function))
- r__allIsBoolean  | R.all(R.is(Boolean))
- r__allIsTrue     | R.all(R.identical(R.T()))
- r__allIsFalse    | R.all(R.identical(R.F()))
- r__padLeft       | R.curry((fillString, maxLength, str) => String(str).padStart(maxLength, fillString))
- r__padRight      | R.curry((fillString, maxLength, str) => String(str).padEnd(maxLength, fillString))
-
+ r__isObject      | `R.is(Object)`
+ r__isNumber      | `R.is(Number)`
+ r__isString      | `R.is(String)`
+ r__isArray       | `R.is(Array)`
+ r__isFunction    | `R.is(Function)`
+ r__isBoolean     | `R.is(Boolean)`
+ r__isTrue        | `R.identical(R.T())`
+ r__isFalse       | `R.identical(R.F())`
+ r__allIs         | `R.useWith(R.all, [R.is, R.identity])`
+ r__allIsObject   | `R.all(R.is(Object))`
+ r__allIsNumber   | `R.all(R.is(Number))`
+ r__allIsString   | `R.all(R.is(String))`
+ r__allIsArray    | `R.all(R.is(Array))`
+ r__allIsFunction | `R.all(R.is(Function))`
+ r__allIsBoolean  | `R.all(R.is(Boolean))`
+ r__allIsTrue     | `R.all(R.identical(R.T()))`
+ r__allIsFalse    | `R.all(R.identical(R.F()))`
+ r__padLeft       | `R.curry((fillString, maxLength, str) => String(str).padStart(maxLength, fillString))`
+ r__padRight      | `R.curry((fillString, maxLength, str) => String(str).padEnd(maxLength, fillString))`
+ r__notEquals     | `R.complement(R.equals)`
+ r__pathNotEq     | `R.complement(R.pathEq)`
+ r__propNotEq     | `R.complement(R.propEq)`
+``
 > If a function was defined by `{{r__define "fn" (r__equals "example")}}`,
 > the `fn` should be used like an helper, rather than a variable.
 >
