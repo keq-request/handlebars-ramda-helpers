@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.7.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.6.0...v1.7.0) (2024-07-31)
+
+
+### Features
+
+* add notEquals pathNotEq propNotEq ([984c0cc](https://www.github.com/keq-request/handlebars-ramda-helpers/commit/984c0cce954cb1694a6e08b476e4987c0b100390))
+
 ## [1.6.0](https://www.github.com/keq-request/handlebars-ramda-helpers/compare/v1.5.0...v1.6.0) (2022-10-28)
 
 
