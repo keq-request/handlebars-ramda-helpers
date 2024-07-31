@@ -108,7 +108,7 @@ In order to facilitate the use of ramda in handlebars, some extension functions 
  r__notEquals     | `R.complement(R.equals)`
  r__pathNotEq     | `R.complement(R.pathEq)`
  r__propNotEq     | `R.complement(R.propEq)`
-``
+
 > If a function was defined by `{{r__define "fn" (r__equals "example")}}`,
 > the `fn` should be used like an helper, rather than a variable.
 >
